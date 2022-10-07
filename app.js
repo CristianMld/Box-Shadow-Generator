@@ -1,6 +1,6 @@
 const box = document.querySelector('.box');
 const generateCodeBtn = document.querySelector('.generate-code-btn');
-const code = document.querySelector('.code pre code');
+const code = document.querySelector('.code');
 const controls = document.querySelectorAll('.control');
 
 let xValue = 0;
@@ -56,9 +56,9 @@ controls.forEach((c) => {
 
 const generateCode = () => {
   if (insetValue) {
-    code.innerHTML = `box-shadow: inset ${xValue}px ${yValue}px ${blurValue}px ${spreadValue}px ${colorValue}`;
+    code.innerHTML = `box-shadow: inset ${xValue}px ${yValue}px ${blurValue}px ${spreadValue}px ${colorValue};`;
   } else {
-    code.innerHTML = `box-shadow: ${xValue}px ${yValue}px ${blurValue}px ${spreadValue}px ${colorValue}`;
+    code.innerHTML = `box-shadow: ${xValue}px ${yValue}px ${blurValue}px ${spreadValue}px ${colorValue};`;
   }
 };
 
