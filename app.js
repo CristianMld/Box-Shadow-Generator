@@ -2,6 +2,7 @@ const box = document.querySelector('.box');
 const generateCodeBtn = document.querySelector('.generate-code-btn');
 const code = document.querySelector('.code');
 const controls = document.querySelectorAll('.control');
+const bodyColor = document.querySelector('.background-color');
 
 let xValue = 0;
 let yValue = 0;
@@ -52,6 +53,10 @@ const updateValues = () => {
 
 controls.forEach((c) => {
   c.addEventListener('input', updateValues);
+});
+
+bodyColor.addEventListener('input', () => {
+  document.body.style.backgroundColor = bodyColor.value;
 });
 
 const generateCode = () => {
